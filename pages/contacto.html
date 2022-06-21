@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <p class="logo">Basiclook</p>
+         <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="lifestyle.html">Lifestyle</a></li>
+                <li><a href="Sneakers.html">Sneakers</a></li>
+                <li><a href="drops.html">Drop</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                
+             </ul>
+         </nav>
+        
+    </header>
+    <main>
+            <form action="contactos.php">
+                <div class="formContactos">
+
+                    <fieldset>
+                        <legend> Informacion personal</legend>
+                        
+                        <div>
+                            <label for="sexo">Hombre</label>
+                            <input type="radio" name="sexo" value="h">
+                            <label for="sexo">Mujer</label>
+                            <input type="radio" name="sexo" value="m">
+                        <label for="sexo">No Binario</label>
+                        <input type="radio" name="sexo" value="nb">
+                    </div>
+                    <br>
+                    <input type="text" name="nombre" placeholder="ingrese su nombre" required>
+                    <br>
+                    <br>
+                    <input type="text" name="apellido" placeholder="ingrese su apellido" required>
+                    <br>
+                    <br>
+                    <select name="talle" id="">
+                 <option value="L">Large</option>
+                 <option value="M">Medium</option>
+                 <option value="S">Small</option>
+                </select>
+                <input type= "submit" value:"Enviar">
+                
+
+                
+            </fieldset>
+
+
+        </form>
+     
+        
+    </div>
+        </main>
+        <footer>
+            
+               <p> &copy; Basiclook 2022</p> 
+            </footer>
+        </div> 
+    
+    
+</body>
+</html>
