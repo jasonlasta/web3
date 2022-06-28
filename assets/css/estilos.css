@@ -1,2 +1,37 @@
+*{
+    box-sizing: border-box;
 
+}
+body {
+    font-family: 'Roboto',sans-serif;
+}
+.btn{
+    background-color: rgb(236, 233, 225);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+     
+}
+.btn:hover {
+    background-color: rgb(228, 223, 204);
+}
+
+.navbar {
+    background-color: antiquewhite;
+}
+
+.logo {
+    animation-name: aparecer;
+    animation-duration: 1.5s;
+   
+    
+    
+   
+     
+}
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 
