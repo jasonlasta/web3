@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.tarjeta1 {
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px;
+  transition: all 3000ms;
+}
+
+.tarjeta2 {
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px;
+  transition: all 3000ms;
+}
+
+.tarjeta3 {
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px;
+  transition: all 3000ms;
+}
+
+.tarjeta1 :hover {
+  transform: scale(1.02);
+}
+
+.tarjeta2 :hover {
+  transform: scale(1.02);
+}
+
+.tarjeta3 :hover {
+  transform: scale(1.02);
+}
+
+.btn {
+  background-color: rgb(175, 175, 175);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.btn:hover {
+  background-color: rgb(202, 202, 202);
+}
