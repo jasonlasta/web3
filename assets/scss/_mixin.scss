@@ -1,0 +1,12 @@
+@mixin propiedadesTarjeta ($radio,$sombras,$transicion) {
+    border-radius: $radio;
+    box-shadow: $sombras;
+    transition: $transicion; 
+
+    
+}
+@mixin propiedadesBtn ($alto,$ancho) {
+    width: $ancho;
+    height: $alto;
+    
+}

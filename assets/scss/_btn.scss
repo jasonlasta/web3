@@ -1,8 +1,12 @@
+
 .btn{
-    background-color: rgb(175, 175, 175);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    @include propiedadesBtn(auto ,auto );
+    
+    background-color: map-get($colorBtn , claro );
+    
      &:hover {
-        background-color: rgb(202, 202, 202);
+        background-color: map-get($colorBtn , oscuro )
     }
     
 }

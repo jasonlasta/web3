@@ -1,43 +1,44 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
-.tarjeta1 {
-  border-radius: 20px;
+.tarjeta1, .tarjeta2, .tarjeta3 {
+  border-radius: 5px;
   box-shadow: 0px 2px 2px;
-  transition: all 3000ms;
-}
-
-.tarjeta2 {
-  border-radius: 20px;
-  box-shadow: 0px 2px 2px;
-  transition: all 3000ms;
-}
+  transition: all 400ms; }
+  .tarjeta1:hover, .tarjeta2:hover, .tarjeta3:hover {
+    transform: scale(1.02); }
 
 .tarjeta3 {
-  border-radius: 20px;
-  box-shadow: 0px 2px 2px;
-  transition: all 3000ms;
-}
+  box-shadow: 0px 3px 3px; }
 
-.tarjeta1 :hover {
-  transform: scale(1.02);
-}
+.card {
+  position: relative;
+  overflow: hidden; }
 
-.tarjeta2 :hover {
-  transform: scale(1.02);
-}
+.imgCard {
+  width: 100%;
+  transition: all linear 0.8s; }
 
-.tarjeta3 :hover {
-  transform: scale(1.02);
-}
+.hoverImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; }
+
+.card:hover .imgCard {
+  opacity: 1; }
+
+.card:hover img.hoverImg {
+  opacity: 1; }
 
 .btn {
-  background-color: rgb(175, 175, 175);
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-.btn:hover {
-  background-color: rgb(202, 202, 202);
-}
+  width: auto;
+  height: auto;
+  background-color: #f3f3f3; }
+  .btn:hover {
+    background-color: #2b2b2b; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: sans-serif; }
