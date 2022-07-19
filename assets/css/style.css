@@ -3,6 +3,16 @@
   margin: 0;
   padding: 0; }
 
+.logo {
+  animation-name: aparecer;
+  animation-duration: 1.5s; }
+
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .tarjeta1, .tarjeta2, .tarjeta3 {
   border-radius: 5px;
   box-shadow: 0px 2px 2px;
@@ -62,7 +72,3 @@ A:visited {
   color: black;
   font-family: arial;
   text-decoration: none; }
-
-.carta :hover {
-  opacity: 0.8;
-  transition: linear 0.5s; }
