@@ -27,7 +27,7 @@
 
 .imgCard {
     width: 100%;
-    transition: all linear 0.8s;
+    transition: linear 0.8s;
 }
 
 .hoverImg {
@@ -35,13 +35,23 @@
     top: 0;
     left: 0;
     opacity: 0;
+    transition: linear 0.5s;
     
 }
 .card:hover .imgCard{
     opacity: 1;
+    
 }
 
 .card:hover img.hoverImg {
     opacity: 1;
+    transition: linear 0.5s;
 
 }
+.cartaStreetwear {
+    :hover {
+      opacity: 0.8;
+      transition: linear 0.5s;
+  
+    }
+  }
