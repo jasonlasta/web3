@@ -57,6 +57,16 @@
     background-color: #2b2b2b;
     transition: linear 0.5s; }
 
+.btnCarrito {
+  width: auto;
+  height: auto;
+  background-color: #f3f3f3;
+  border: 1;
+  width: 100%; }
+  .btnCarrito:hover {
+    background-color: #2b2b2b;
+    transition: linear 0.5s; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: sans-serif; }
 
@@ -72,3 +82,23 @@ A:visited {
   color: black;
   font-family: arial;
   text-decoration: none; }
+
+.envio {
+  color: #4e9e75; }
+
+.infoProdu {
+  opacity: 0;
+  transition-duration: 0.5s; }
+
+.card:hover .infoProdu {
+  opacity: 1; }
+
+.enlace {
+  text-decoration: none; }
+
+.icono p {
+  opacity: 0;
+  transition-duration: 00.5s; }
+
+.icono:hover .infoRedes {
+  opacity: 1; }

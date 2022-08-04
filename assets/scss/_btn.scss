@@ -12,3 +12,17 @@
     }
     
 }
+
+.btnCarrito {
+    @include propiedadesBtn(auto ,auto );
+    
+    background-color: map-get($colorBtn , claro );
+    
+     &:hover {
+        background-color: map-get($colorBtn , oscuro );
+        transition: linear 0.5s;
+    
+    }
+    border: 1;
+    width: 100%;
+}
