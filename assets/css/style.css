@@ -102,3 +102,6 @@ A:visited {
 
 .icono:hover .infoRedes {
   opacity: 1; }
+
+a {
+  text-decoration: none; }
