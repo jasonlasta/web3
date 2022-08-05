@@ -104,4 +104,8 @@ A:visited {
   opacity: 1; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: aqua; }
+
+.iconoRedes {
+  color: #cb0909; }
