@@ -103,9 +103,8 @@ A:visited {
 .icono:hover .infoRedes {
   opacity: 1; }
 
-a {
-  text-decoration: none;
-  color: rgb(21, 28, 28)215, 215); }
-
 .iconoRedes {
-  color: rgb(0, 0, 0); }
+  color: black; }
+
+a {
+  color: black; }
