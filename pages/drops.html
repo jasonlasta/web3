@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Indumentaria,ropa,vintage,sneakers,zapatillas,zona norte,drop,moda,tendencias,style,estilo">
     <meta name="description" content="las mejores prendas seleccionadas,nuevas,segunda mano,vintage">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="icon" href="../assets/img/favicon2.ico">
     <script src="https://kit.fontawesome.com/9a02c713ca.js" crossorigin="anonymous"></script>
     <title>Drop - Sour Cream </title>
@@ -20,9 +21,9 @@
     <div class="logo">
         <a href="../index.html"><img src="../assets/img/logo1.png" class="mx-auto d-block" width="300" alt="LOGO"></a>
       </div>
-      <div class="text-end mb-3">
+      <!-- <div class="text-end mb-3">
         <a href="" class="text-end"><i class="fa-solid fa-1x fa-cart-shopping"></i></a>
-      </div>
+      </div> -->
      <a class="navbar-brand mx-auto" href="#">
      </a>
      <nav class="navbar navbar-expand-lg bg-light">
@@ -56,15 +57,49 @@
    
    <header class="container">
      <hr>
-    <h1 class="text-center">Store</h1>
+     <div>
+
+       <h1 class="text-center">Store</h1>
+       
+
+     </div>
     
 
     <main>
-      <div class="container">
-       <h2 class="text-center mt-5">Indumentaria</h2>
+      <h2 class="text-center mt-5">Indumentaria</h2>
+
+      <div class="container row" id="tienda"> 
+
+      
+    <section class="carrito-c animated d-flex justify-content-end">
+        <span style="font-size:10px;cursor:pointer" id="openCar">
+          <img src="../assets/img/shopping-cart_icon-icons.com_72552.png" class=" mb-5 nav-link dropdown-toggle img-fluid" height="40px"
+          width="20px" data-bs-toggle="modal" data-bs-target="#exampleModal"></img>
+        </span>
+      </section>
+      
+      <section class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Carrito de compra</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
+              <div class="row text-center" id="carrito">
+                
+              </div>
+              
+            </div>
+            <div class="modal-footer">
+              <div id="total"></div>
+            </div>
+          </div> 
+          
        
-       <div class="row mt-5 mb-5 ">
-       <div class="col-sm-4 mb-5">
+       <!-- <div class="row mt-5 mb-5 "> -->
+        <!--<div class="col-sm-4 mb-5">
          <div class="card">
            <div class="card-body text-center">
              <img src="../assets/img/buso1.jpg" class="imgCard card-img-top" alt="buso nike gris">
@@ -216,8 +251,8 @@
           </div>
           
          
-       </div>
-     </div>
+       </div>-->
+     </div> 
    </header>
    </main>
    <aside></aside>
@@ -242,6 +277,8 @@
         
        
 <!-- JavaScript Bundle with Popper -->
+<script src="../app.js" type="module"></script>
+<script src="../stock.js" type="module"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

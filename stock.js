@@ -1,0 +1,99 @@
+const productos = [
+    {
+        "id": 1,
+        "nombre": "Buso Nike 1",
+        "img": "../assets/img/buso1.jpg",
+        "imgHover": "../assets/img/buso2.jpg",
+        "precio": 40,
+        "cantidad":1
+    },
+    {
+        "id": 2,
+        "nombre": "Remera Stussy",
+        "img": "../assets/img/remera1.jpg",
+        "imgHover": "../assets/img/remera2.jpg",
+        "precio": 30,
+        "cantidad":1
+    },
+    {
+        "id": 3,
+        "nombre": "Remera Burberry",
+        "img": "../assets/img/remera3.jpg",
+        "imgHover": "../assets/img/remera4.jpg",
+        "precio": 40,
+        "cantidad":1
+    },
+    {
+        "id": 4,
+        "nombre": "Campera Carhartt",
+        "img": "../assets/img/camper1.jpg",
+        "imgHover": "../assets/img/campera2.jpg",
+        "precio": 60,
+        "cantidad":1
+    },
+    {
+        "id": 4,
+        "nombre": "Campera Adidas",
+        "img": "../assets/img/campera3.jpg",
+        "imgHover": "../assets/img/campera4.jpg",
+        "precio": 45,
+        "cantidad":1
+    },
+    {
+        "id": 5,
+        "nombre": "Buso Nike",
+        "img": "../assets/img/buso3.jpg",
+        "imgHover": "../assets/img/buso4.jpg",
+        "precio": 50,
+        "cantidad":1
+    },
+    {
+        "id": 6,
+        "nombre": "Buso Stussy ",
+        "img": "../assets/img/stussy1.jpg",
+        "imgHover": "../assets/img/stussy2.jpg",
+        "precio": 65,
+        "cantidad":1
+    },
+    {
+        "id": 6,
+        "nombre": "Buso Adidas ",
+        "img": "../assets/img/buso5.jpg",
+        "imgHover": "../assets/img/buso6.jpg",
+        "precio": 35,
+        "cantidad":1
+    },
+    {
+        "id": 7,
+        "nombre": "Remera Adidas",
+        "img": "../assets/img/remera7.jpg",
+        "imgHover": "../assets/img/remera8.jpg",
+        "precio": 30,
+        "cantidad":1
+    },
+    {
+        "id": 10,
+        "nombre": "Nike Dunk ",
+        "img": "../assets/img/converse1.jpg",
+        "imgHover": "../assets/img/converse2.jpg",
+        "precio": 80,
+        "cantidad":1
+    },
+    {
+        "id": 9,
+        "nombre": "Nike Blazer ",
+        "img": "../assets/img/blazer1.jpg",
+        "imgHover": "../assets/img/blazer2.jpg",
+        "precio": 70,
+        "cantidad":1
+    },
+    {
+        "id": 8,
+        "nombre": "Converse Chuck",
+        "img": "../assets/img/converse1.jpg",
+        "imgHover": "../assets/img/converse2.jpg",
+        "precio": 80,
+        "cantidad":1
+    }
+]
+export {productos}; 
