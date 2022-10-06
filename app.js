@@ -40,6 +40,14 @@ function pintarProductos() {
         producto.querySelector('button')
         .addEventListener('click', ()=> {
             agregarProductos(id)
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              toast:true,
+              title: 'PRODUCTO AGREGADO AL CARRITO!',
+              showConfirmButton: false,
+              timer: 1200
+            })
 
         })
 
@@ -98,7 +106,28 @@ function pintarCarrito() {
              <button class="btn btn-light">Eliminar</button>
         `
         producto.querySelector('button').addEventListener('click', () =>{
-          eliminarProductoCarrito(indice)
+          
+          Swal.fire({
+            title: 'Estas seguro que queres eliminar el producto?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#2b2b2b',
+            cancelButtonColor: '#2b2b2b',
+            confirmButtonText: 'SI',
+            cancelButtonText: 'NO',
+          }).then((result) => {
+            if (result.isConfirmed) {
+              eliminarProductoCarrito(indice)
+              Swal.fire({
+                position: 'top-end',
+                icon: 'warning',
+                toast:true,
+                title: `EL PRODUCTO "${p.nombre}" FUE ELIMINADO`,
+                showConfirmButton: false,
+                timer: 1200
+              })
+            }
+          })
 
         }
         )
@@ -108,7 +137,7 @@ function pintarCarrito() {
     })
 } 
 function eliminarProductoCarrito(indice) {
-  carrito[indice].cantidad--;
+  carrito[indice].cantidad--; 
 
   carrito[indice].cantidad === 0 && carrito.splice(indice,1); //OPERADOR LOGICO AND
 
