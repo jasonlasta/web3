@@ -1,16 +1,36 @@
-import { productos } from "./stock.js";
+/* import { productos } from "./stock.js"; */
+
+const traerProductos = async () => {
+
+  try {
+
+    const response = await fetch('/stock.json');
+    const data = await response.json();
+
+    return data;
+    
+  } catch (error) {
+
+    console.log ('Hubo un error', error)
+    
+  };
+};
 
 document.addEventListener("DOMContentLoaded", () => {
+  
+  
   cargarStorage()
   pintarProductos();
   pintarCarrito();
+  agregarProductos();
 });
 
 const carrito = []
 
-function pintarProductos() {
+async function pintarProductos() {
 
     const tienda = document.getElementById('tienda');
+    const productos =  await traerProductos(); 
     productos.forEach(({nombre,img,imgHover,precio, id}) => { // DESESTRUCTURACION
         
         let producto = 
@@ -30,7 +50,7 @@ function pintarProductos() {
            <div class="card-body text-center">
            <h3 class="d-flex justify-content-center">${nombre}</h3>
              <img src="${img}" class=" card-img-top" alt="buso nike gris">
-             <p class="infoProdu mt-5 d-flex justify-content-between font-italic">Buso nike <span>$USD ${precio}</span></p>
+             <p class="infoProdu mt-5 d-flex justify-content-between font-italic">${nombre}<span>$USD ${precio}</span></p>
              <img src="${imgHover}" alt="buso nike gris" class="hoverImg card-img-top">
              <button type="button" id="${id}" class="btn mt-5 btn-light text-center">AGREGAR</button>
         `
@@ -56,14 +76,18 @@ function pintarProductos() {
 }
 pintarProductos();
 
-function agregarProductos(id){
+async function agregarProductos(id){
+
+const stock = await traerProductos();
     
-let producto = productos.find(producto => producto.id === id);
+let producto = stock.find(producto => producto.id === id);
  // validacion de carga del mismo producto 
 let productoCargado = carrito.find(producto => producto.id == id)
 
   if(productoCargado) {
+
     productoCargado.cantidad++; // OPERADOR AVANZADO ++
+
     console.log(carrito);
 
   } else {
@@ -79,6 +103,7 @@ let productoCargado = carrito.find(producto => producto.id == id)
 }
 
 function pintarCarrito() {
+  
     
     let carritoHTML=document.querySelector('#carrito');
     carritoHTML.innerHTML = '';
@@ -101,8 +126,9 @@ function pintarCarrito() {
            <h1 class="d-flex justify-content-center">${p.nombre}</h1>
              <img src="${p.img}" class=" card-img-top" alt="buso nike gris">
              <p>Cantidad: ${p.cantidad}</p>
-             <p class="infoProdu mt-5 d-flex justify-content-between font-italic">Buso nike <span>$USD ${p.precio}</span></p>
-             <img src="${p.imgHover}" alt="buso nike gris" class="hoverImg card-img-top">
+             <p class="infoProdu mt-5 d-flex justify-content-center font-italic"> ${p.nombre} </p>
+             <p class="infoProdu mt-5 d-flex justify-content-center font-italic"> <span>$USD ${p.precio}</span></p>
+             <img src="${p.imgHover}" alt="" class="hoverImg card-img-top">
              <button class="btn btn-light">Eliminar</button>
         `
         producto.querySelector('button').addEventListener('click', () =>{
@@ -134,18 +160,19 @@ function pintarCarrito() {
          carritoHTML.appendChild(producto);
 
          
-    })
-} 
+    });
+} ;
 function eliminarProductoCarrito(indice) {
+
   carrito[indice].cantidad--; 
 
-  carrito[indice].cantidad === 0 && carrito.splice(indice,1); //OPERADOR LOGICO AND
+  /* carrito[indice].cantidad === 0 && carrito.splice(indice,1); */ //OPERADOR LOGICO AND
 
-  /* if(carrito[indice].cantidad === 0) {
+  if(carrito[indice].cantidad === 0) {
 
     carrito.splice(indice,1);
 
-  } */
+  }
   pintarCarrito();
   totalCompra();
 
@@ -154,22 +181,29 @@ function eliminarProductoCarrito(indice) {
 function totalCompra () {
 
   let total = 0;
+
   carrito.forEach((p) => {
+
     total += p.precio * p.cantidad;
 
   })
   console.log(total);
+
   const t = document.getElementById('total'); 
 
   t.innerHTML = `<h5>${total}usd</h5>`
 
-  
+  guardarStorage();
 }
+
 function guardarStorage () {
+
   localStorage.setItem('carritoLocal', JSON.stringify(carrito));
+
 }
 
 function cargarStorage () {
+
   const carritoLocal = localStorage.getItem('carritoLocal');
 
   if(carritoLocal){
